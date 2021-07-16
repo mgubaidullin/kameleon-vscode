@@ -1,0 +1,93 @@
+
+/* vscode */
+body {
+    background-color: transparent;
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px 0 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {
+      margin: 10px 0px 10px 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 1200px) {
+    .column {
+      width: 33.3%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  /* Style the counter cards */
+  .kamelet-card {
+    box-shadow: 0px 0px 1px 1px rgb(200 200 200 / 20%);
+    height: 140px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .description {
+    font-weight: 100;
+    font-size: 14px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn {
+    float: right;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 17px;
+    background-color: transparent;
+    color: orange;
+    border-color: transparent;
+    outline:none;
+  }
+
+  button:hover, button:active, button:focus {
+    background-color: transparent;
+    color: orange;
+    border-color: transparent;
+    outline:none;
+  }
+
+  .icon {
+    height: 1.5em;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    border: none;
+}

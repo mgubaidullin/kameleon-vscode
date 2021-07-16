@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <base href="{{base}}" />
+  <script type="text/javascript">
+    "{{init}}"
+  </script>
+  <link href="shared/patternfly.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="shared/kameleon.css" rel="stylesheet" type="text/css" media="all">
+  <title>Sample Page</title>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <div class="row">
+      <div id="kamelets">
+    </div>
+  </div>
+  <script type="text/javascript">
+    initEventListener();
+
+    const vscode = acquireVsCodeApi();
+    init();
+
+    function addKamelet(name) {
+      vscode.postMessage({
+        command: "addKamelet",
+        parameters: {
+          name: name
+        }
+      });
+    }
+
+    function init() {
+      vscode.postMessage({
+        command: "ready"
+      });
+    }
+
+    function cancelSetting() {
+      init();
+    }
+  </script>
+</body>
+
+</html>
